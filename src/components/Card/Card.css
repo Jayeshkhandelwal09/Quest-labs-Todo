@@ -12,18 +12,31 @@
     gap: 5px;
 }
 
+.card_top_more{
+    position: relative;
+    cursor: pointer;
+}
+
+.card_dropdown{
+    background-color: #fff;
+    width: 130px;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 0 20px rgba(0,0,0,0.05);
+}
+
 .card_top_labels{
     flex: 1;
     display: flex;
     gap:10px;
 }
 
-.card_top_labels svg{
+.card_top svg{
     opacity: 0;
     transition: 200ms;
 }
 
-.card_top_labels svg:hover{
+.card:hover .card_top svg{
     opacity: 1;
 }
 
@@ -47,3 +60,4 @@
     gap: 5px;
     align-items: center;
 }
+
