@@ -4,7 +4,7 @@ import "./Editable.css";
 
 function Editable(props) {
   const [showEdit, setShowEdit] = useState(false);
-  const [inputValue , setInputValue] = useState( "")
+  const [inputValue , setInputValue] = useState( props.default || "")
   return (
     <div className="editable">
       {showEdit ? (

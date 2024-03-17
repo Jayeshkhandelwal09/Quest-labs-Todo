@@ -1,56 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Board from "./components/board/Board";
 import Editable from "./components/Editable/Editable";
 
 function App() {
-  const [boards, setBoards] = useState([
-    {
-      id: Date.now() + Math.random() * 2,
-      title: "To Do",
-      cards: [
-        {
-          id: Date.now() + Math.random(),
-          title: "Card 1",
-          tasks: [],
-          labels: [
-            {
-              text: "frontend",
-              color: "blue",
-            },
-          ],
-          desc: "banakjd wekj fwekj",
-          date: "",
-        },
-        {
-          id: Date.now() + Math.random(),
-          title: "Card 2",
-          tasks: [],
-          labels: [
-            {
-              text: "backend",
-              color: "Red",
-            },
-          ],
-          desc: "banakjd wekj fwekj",
-          date: "",
-        },
-        {
-          id: Date.now() + Math.random(),
-          title: "Card 2",
-          tasks: [],
-          labels: [
-            {
-              text: "backend",
-              color: "Red",
-            },
-          ],
-          desc: "banakjd wekj fwekj",
-          date: "",
-        },
-      ],
-    },
-  ]);
+  const [boards, setBoards] = useState(JSON.parse(localStorage.getItem("todo"))||[]);
 
   const [target, setTarget] = useState({
     cid: "",
@@ -129,6 +83,21 @@ function App() {
     });
   };
 
+  const updateCard = (cid,bid,card) =>{
+    const bIndex = boards.findIndex((item) => item.id === bid);
+    if (bIndex < 0) return;
+    const cIndex = boards[bIndex].cards?.findIndex((item) => item.id === cid);
+    if (cIndex < 0) return;
+
+    const tempBoards = [...boards]
+    tempBoards[bIndex].cards[cIndex]= card
+    setBoards(tempBoards)
+  }
+
+  useEffect(()=>{
+    localStorage.setItem("todo" , JSON.stringify(boards));
+  },[boards])
+
   return (
     <div className="app">
       <div className="app_navbar">
@@ -146,6 +115,7 @@ function App() {
               removeCard={removeCard}
               handleDragEnd={handleDragEnd}
               handleDragEnter={handleDragEnter}
+              updateCard={updateCard}
             />
           ))}
           <div className="app_boards_board">
