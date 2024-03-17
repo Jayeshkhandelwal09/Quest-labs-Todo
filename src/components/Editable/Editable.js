@@ -4,6 +4,7 @@ import "./Editable.css";
 
 function Editable(props) {
   const [showEdit, setShowEdit] = useState(false);
+  const [inputValue , setInputValue] = useState( "")
   return (
     <div className="editable">
       {showEdit ? (
@@ -11,14 +12,17 @@ function Editable(props) {
           className={`editable_edit ${props.editClass || ""}`}
           onSubmit={(event) => {
             event.preventDefault();
-            if (props.onSubmit) props.onSubmit();
+            if (props.onSubmit) props.onSubmit(inputValue);
+            setShowEdit(false)
+            setInputValue("")
           }}
         >
           <input
           autoFocus
             type="text"
             placeholder={props.placeholder || "Enter Item"}
-            defaultValue={props.text}
+            value={inputValue}
+            onChange={(e)=> setInputValue(e.target.value)}
           />
           <div className="editable_edit_footer">
             <button type="submit">{props.buttonText || "Add"}</button>
