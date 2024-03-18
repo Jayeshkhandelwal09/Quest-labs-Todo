@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Quest Labs Todo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Quest Labs Todo is a Todo Management board application designed to help you manage tasks efficiently. This README provides an overview of the application's features, setup instructions, and dependencies.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Board Management**: Create, view, and delete boards to organize your tasks effectively.
+- **Card Management**: Add, edit, and delete cards within boards. Each card contains details about a specific task.
+- **Modal View**: Clicking on a card opens a modal displaying detailed information about the task. You can edit or delete the task directly from the modal.
+- **Drag and Drop**: Easily rearrange cards within the same board or move them between boards using drag and drop functionality.
 
-### `npm start`
+## Screenshots/Videos
+![Screenshot Capture - 2024-03-18 - 14-19-56](https://github.com/Jayeshkhandelwal09/Quest-labs-Todo/assets/112822012/3c67bcda-b5ef-4fb4-8fa5-0c72b03dba7b)
+![Screenshot Capture - 2024-03-18 - 14-20-33](https://github.com/Jayeshkhandelwal09/Quest-labs-Todo/assets/112822012/ff79c7bc-1366-4483-92b6-4ff01d283c22)
+![Screenshot Capture - 2024-03-18 - 14-20-09](https://github.com/Jayeshkhandelwal09/Quest-labs-Todo/assets/112822012/492f61c7-a5c4-4e85-9b82-665515fe1cd4)
+![Screenshot Capture - 2024-03-18 - 14-20-52](https://github.com/Jayeshkhandelwal09/Quest-labs-Todo/assets/112822012/7845c5cc-0bd2-42a4-a044-9a10341e67f7)
+![Screenshot Capture - 2024-03-18 - 14-21-09](https://github.com/Jayeshkhandelwal09/Quest-labs-Todo/assets/112822012/768a3b61-56e9-420f-8392-729db1ce419a)
+![Screenshot Capture - 2024-03-18 - 14-21-47](https://github.com/Jayeshkhandelwal09/Quest-labs-Todo/assets/112822012/5e3005d8-3ad8-4ea9-886d-e619b29393fa)
+![Screenshot Capture - 2024-03-18 - 14-28-47](https://github.com/Jayeshkhandelwal09/Quest-labs-Todo/assets/112822012/aa0785ec-ed98-4957-9d1d-201c12fa3e8d)
+![Screenshot Capture - 2024-03-18 - 14-28-33](https://github.com/Jayeshkhandelwal09/Quest-labs-Todo/assets/112822012/6d269c70-c9fb-472b-9097-3d7639d69bb7)
+![Screenshot Capture - 2024-03-18 - 14-24-16](https://github.com/Jayeshkhandelwal09/Quest-labs-Todo/assets/112822012/c5000d23-eb58-4b59-89f2-2f38c6adc351)
+![Screenshot Capture - 2024-03-18 - 14-22-55](https://github.com/Jayeshkhandelwal09/Quest-labs-Todo/assets/112822012/0b02bdc3-44e0-422c-b0ff-6ebf0cb47705)
+![Screenshot Capture - 2024-03-18 - 14-22-30](https://github.com/Jayeshkhandelwal09/Quest-labs-Todo/assets/112822012/55edbfc6-f549-4243-80d4-4d5f5fe971eb)
+![Screenshot Capture - 2024-03-18 - 14-22-16](https://github.com/Jayeshkhandelwal09/Quest-labs-Todo/assets/112822012/d8d8fff0-fff7-436a-b4b2-33d64b078696)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Drag and Drop Functionality Preview Video link
+https://vimeo.com/924533672/cb763cbd46?share=copy
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```
+   git clone https://github.com/your-username/quest-labs-todo.git
+   ```
 
-### `npm run build`
+2. Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```
+   cd quest-labs-todo
+   cd todo
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Install dependencies:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```
+   npm install
+   ```
 
-### `npm run eject`
+4. Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Open your browser and visit `http://localhost:3000` to view the application.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The application relies on the following npm packages:
 
-## Learn More
+- **react**: JavaScript library for building user interfaces.
+- **react-dom**: React package for working with the DOM.
+- **react-feather**: Icon set for React components.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Adding Boards**: Click the "Add boards" button to create a new board.
+- **Adding Cards**: Within a board, click the "Add Card" button to create a new task card.
+- **Editing Cards**: Click on a card to view its details, then click "Edit" to modify the task details.
+- **Deleting Cards**: While viewing a card's details, click "Delete" to remove the task from the board.
+- **Deleting Boards**: Click the three dots menu on a board and select "Delete" to remove the entire board.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
